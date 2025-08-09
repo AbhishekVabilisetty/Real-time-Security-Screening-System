@@ -66,8 +66,6 @@ cd Real-time-Security-Screening-System
 
 ### 2️⃣ Install Required Python Modules
 
-Since you don't have a `requirements.txt` file, install the modules directly:
-
 ```bash
 pip install opencv-python numpy face_recognition
 ```
@@ -114,11 +112,7 @@ python main.py --source path/to/video.mp4
 
 ---
 
-## 📸 Example Output
 
-*(Insert screenshots or GIFs here to showcase detections)*
-
----
 
 ## 📊 Model Training (Optional)
 
@@ -130,24 +124,6 @@ If you want to train your own model:
 
 ---
 
-## 🤝 Contributing
-
-Pull requests are welcome!
-For major changes:
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/xyz`)
-3. Commit changes (`git commit -m 'Add feature xyz'`)
-4. Push to branch (`git push origin feature/xyz`)
-5. Open a pull request
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 👤 Author
 
