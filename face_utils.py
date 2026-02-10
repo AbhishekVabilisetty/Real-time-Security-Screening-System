@@ -5,6 +5,7 @@ from datetime import datetime
 import cv2
 import face_recognition
 import numpy as np
+import pickle
 
 def load_known_faces(folder):
     encs = []
@@ -44,6 +45,26 @@ def iou(boxA, boxB):
         return 0.0
     return interArea / union
 
+def save_encodings(known_face_encodings, known_face_names, filename="encodings.pkl"):
+    """Save encodings and names to a pickle file."""
+    data = {"encodings": known_face_encodings, "names": known_face_names}
+    with open(filename, "wb") as f:
+        pickle.dump(data, f)
+    print(f"[INFO] Saved encodings to '{filename}'.")
+
+
+def load_encodings(filename="encodings.pkl"):
+    """Load encodings and names from a pickle file if it exists."""
+    if os.path.exists(filename):
+        with open(filename, "rb") as f:
+            data = pickle.load(f)
+        print(f"[INFO] Loaded {len(data['encodings'])} encodings from '{filename}'.")
+        return data["encodings"], data["names"]
+    else:
+        print(f"[WARN] Encoding file '{filename}' not found.")
+        return [], []
+
+        
 def save_unknown_crop(original_frame, small_loc, scale, prefix="unknown", save_dir=None, padding=30):
     top, right, bottom, left = small_loc
     top_o = int(top / scale) - padding
