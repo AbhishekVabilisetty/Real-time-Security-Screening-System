@@ -7,9 +7,10 @@
 ## 📋 Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
+- [Key Features](#key-features)
 - [System Architecture](#system-architecture)
 - [Performance Metrics](#performance-metrics)
+- [Tech Stack](#tech-stack)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -17,7 +18,11 @@
 - [Project Structure](#project-structure)
 - [Advanced Features](#advanced-features)
 - [Troubleshooting](#troubleshooting)
+- [Performance Optimization](#performance-optimization)
 - [License](#license)
+- [Authors](#authors)
+- [Contributing](#contributing)
+- [Support](#support)
 
 ---
 
